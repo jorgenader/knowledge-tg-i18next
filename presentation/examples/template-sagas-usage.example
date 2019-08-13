@@ -1,0 +1,7 @@
+import { getTranslations } from 'sagas/helpers/i18n';
+
+...
+
+function* someSaga() {
+    const { t, i18n } = yield getTranslations();
+}

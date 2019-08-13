@@ -1,0 +1,5 @@
+ngettext("value of key", "values of key", 1);
+// -> "value of key"
+
+ngettext("value of key", "values of key", 2);
+// -> "values of key"

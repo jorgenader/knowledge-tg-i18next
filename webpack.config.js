@@ -23,6 +23,11 @@ module.exports = {
   ],
   module: {
     rules: [{
+      test: /\.example$/,
+      use: [{
+        loader: 'raw-loader'
+      }]
+    }, {
       test: /\.md$/,
       use: [{
         loader: 'html-loader'

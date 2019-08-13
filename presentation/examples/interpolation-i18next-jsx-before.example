@@ -1,0 +1,3 @@
+<div>
+  Hello <strong title="this is your name">{name}</strong>, you have {count} unread message(s). <Link to="/msgs">Go to messages</Link>.
+</div>

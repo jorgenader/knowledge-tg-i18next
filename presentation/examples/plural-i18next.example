@@ -1,0 +1,14 @@
+// 2 plural forms
+i18next.t('key', {count: 1}); // -> "value of key"
+i18next.t('key', {count: 2}); // -> "values of key"
+
+// multiple plural forms
+i18next.t('key', {count: 0}); // -> "zero"
+i18next.t('key', {count: 1}); // -> "singular"
+i18next.t('key', {count: 2}); // -> "two"
+i18next.t('key', {count: 3}); // -> "few"
+i18next.t('key', {count: 4}); // -> "few"
+i18next.t('key', {count: 5}); // -> "few"
+i18next.t('key', {count: 11}); // -> "many"
+i18next.t('key', {count: 99}); // -> "many"
+i18next.t('key', {count: 100}); // -> "other"

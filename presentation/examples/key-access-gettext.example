@@ -1,0 +1,11 @@
+// simple translation
+gettext("value of key");
+// -> "value of key"
+
+// translation w/ context
+pgettext('look', "value of look deep");
+// -> "value of look deep"
+
+// translation from different domain
+dpgettext('common', 'nested', "hi I'm from common namespace");
+// -> "hi I'm from common namespace"

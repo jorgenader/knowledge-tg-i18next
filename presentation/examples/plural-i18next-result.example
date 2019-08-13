@@ -1,0 +1,12 @@
+{
+    "key": "value of key",
+    "key_plural": "value of key",
+    "multi": {
+        "key_0": "zero",
+        "key_1": "singular",
+        "key_2": "two",
+        "key_3": "few",
+        "key_4": "many",
+        "key_5": "other"
+    }
+}

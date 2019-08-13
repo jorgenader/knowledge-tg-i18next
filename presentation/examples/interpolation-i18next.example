@@ -1,0 +1,2 @@
+i18next.t('key', { what: 'i18next', how: 'great' });
+// -> "i18next works great"

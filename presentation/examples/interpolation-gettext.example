@@ -1,0 +1,2 @@
+interpolate(gettext("%s works %s"), 'gettext', 'great');
+// -> "gettext works great"

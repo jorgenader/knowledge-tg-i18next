@@ -1,0 +1,16 @@
+// translations.json - default namespace
+{
+    "key": "value of key",
+    "value of key": "value of key",
+    "look": {
+        "deep": "value of look deep",
+        "deep_test": "value of look deep with context=test"
+    }
+}
+
+// common.json
+{
+    "nested": {
+        "key": "hi I'm from common namespace"
+    }
+}

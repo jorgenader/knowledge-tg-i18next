@@ -3,15 +3,14 @@ import React from 'react';
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
+  Appear,
+  CodePane,
   Deck,
   Heading,
   Image,
+  Link,
   List,
   ListItem,
-  Notes,
-  Quote,
   Slide,
   Text
 } from 'spectacle';
@@ -20,7 +19,7 @@ import {
 import createTheme from 'spectacle/lib/themes/default';
 
 const images = {
-  formidagon: require('../assets/formidable-logo.svg'),
+  ecoSystem: require('../assets/i18next-ecosystem.jpg'),
   goodWork: require('../assets/good-work.gif')
 };
 
@@ -37,7 +36,7 @@ const theme = createTheme(
   {
     primary: 'Montserrat',
     secondary: 'Helvetica'
-  }
+  },
 );
 
 export default class Presentation extends React.Component {
@@ -49,59 +48,141 @@ export default class Presentation extends React.Component {
         theme={theme}
       >
         <Slide transition={['zoom']} bgColor="primary">
+          <Image src={images.ecoSystem} width={500} />
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+            SPA & I18next
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" fit bold>
-            open the presentation/index.js file to get started
+          <Text margin="10px" textSize="1.5em" textColor="tertiary">
+            Jorgen Ader
           </Text>
-        </Slide>
-        <Slide bgColor="secondary">
-          <Image src={images.formidagon} width={800} />
-        </Slide>
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>
-            Typography
-          </Heading>
-          <Heading size={1} textColor="secondary">
-            Heading 1
-          </Heading>
-          <Heading size={2} textColor="secondary">
-            Heading 2
-          </Heading>
-          <Heading size={3} textColor="secondary">
-            Heading 3
-          </Heading>
-          <Heading size={4} textColor="secondary">
-            Heading 4
-          </Heading>
-          <Heading size={5} textColor="secondary">
-            Heading 5
-          </Heading>
-          <Text size={6} textColor="secondary">
-            Standard text
+          <Text textSize="1em" textColor="secondary">
+            18.12.2018
           </Text>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>
-            Standard List
+            Why i18next?
           </Heading>
-          <List>
-            <ListItem bulletStyle="star">Item 1</ListItem>
-            <ListItem bulletStyle="cross">Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
+          <Appear>
+            <List>
+              <ListItem>Complete solution</ListItem>
+              <ListItem>Flexibility</ListItem>
+              <ListItem>Scalability</ListItem>
+              <ListItem>Ecosystem</ListItem>
+            </List>
+          </Appear>
         </Slide>
-        <Slide transition={['fade']} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite margin="10px 0 0 30px">Author</Cite>
-          </BlockQuote>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={1} textColor="primary">Examples</Heading>
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="primary">Translation access</Heading>
+          <Appear>
+            <div>
+              <Text textColor="primary">gettext</Text>
+              <CodePane lang="js" source={require('./examples/key-access-gettext.example')} />
+            </div>
+          </Appear>
+          <Appear>
+            <div>
+              <Text textColor="primary">i18next</Text>
+              <CodePane lang="js" source={require('./examples/key-access-i18next.example')} />
+            </div>
+          </Appear>
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="primary">Resulting</Heading>
+          <CodePane fit lang="js" source={require('./examples/key-access-i18next-result.example')} />
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="primary">Plurals</Heading>
+          <Appear>
+            <div>
+              <Text textColor="primary">gettext</Text>
+              <CodePane lang="js" source={require('./examples/plural-gettext.example')} />
+            </div>
+          </Appear>
+          <Appear>
+            <div>
+              <Text textColor="primary">i18next</Text>
+              <CodePane lang="js" source={require('./examples/plural-i18next.example')} />
+            </div>
+          </Appear>
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Text textColor="primary">Resulting file</Text>
+          <CodePane fit lang="js" source={require('./examples/plural-i18next-result.example')} />
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="primary">Interpolation</Heading>
+          <Appear>
+            <div>
+              <Text textColor="primary">gettext</Text>
+              <CodePane lang="js" source={require('./examples/interpolation-gettext.example')} />
+            </div>
+          </Appear>
+          <Appear>
+            <div>
+              <Text textColor="primary">i18next</Text>
+              <CodePane lang="js" source={require('./examples/interpolation-i18next.example')} />
+            </div>
+          </Appear>
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Heading size={6} textColor="primary">Interpolation in JSX</Heading>
+          <Appear>
+            <div>
+              <Text textColor="primary">Before</Text>
+              <CodePane lang="js" source={require('./examples/interpolation-i18next-jsx-before.example')} />
+            </div>
+          </Appear>
+          <Appear>
+            <div>
+              <Text textColor="primary">After</Text>
+              <CodePane lang="js" source={require('./examples/interpolation-i18next-jsx-after.example')} />
+            </div>
+          </Appear>
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Text textColor="primary">Resulting file</Text>
+          <CodePane fit lang="js" source={require('./examples/plural-i18next-result.example')} />
+        </Slide>
+        <Slide transition={['fade']} bgColor="tertiary">
+          <Text textColor="primary">Project template examples</Text>
+          <Appear>
+            <CodePane fit lang="js" source={require('./examples/template-sagas-usage.example')} />
+          </Appear>
         </Slide>
         <Slide>
+          <Text>Big thanks to Joosep for the research</Text>
           <Image src={images.goodWork} width={500} />
-          <Notes>gifs work too</Notes>
+        </Slide>
+        <Slide>
+          <Heading size={6} textColor="secondary" caps>
+            References
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="https://github.com/JoosepAlviste/parrot-mania/pull/1">
+                Joosep did the research
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://github.com/FormidableLabs/spectacle/">
+                Spectacle for the slides
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://www.i18next.com/">
+                I18next
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://react.i18next.com/">
+                I18next React
+              </Link>
+            </ListItem>
+          </List>
         </Slide>
       </Deck>
     );

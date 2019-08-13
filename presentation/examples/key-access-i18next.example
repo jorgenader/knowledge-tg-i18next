@@ -1,0 +1,18 @@
+// simple translation
+i18next.t('key');
+// -> "value of key"
+
+// gettext like keys
+i18next.t('value of key');
+// -> "value of key"
+
+// translation w/ context
+i18next.t('look.deep');
+// -> "value of look deep"
+
+i18next.t('look.deep', { context: 'test' });
+// -> "value of look deep with context=test"
+
+// translation from different namespace
+i18next.t('common:nested.key');
+// -> "hi I'm from common namespace"
