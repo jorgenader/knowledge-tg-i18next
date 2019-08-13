@@ -168,6 +168,11 @@ export default class Presentation extends React.Component {
               </Link>
             </ListItem>
             <ListItem>
+              <Link href="https://gitlab.com/thorgate/ymo/">
+                YMO project
+              </Link>
+            </ListItem>
+            <ListItem>
               <Link href="https://github.com/FormidableLabs/spectacle/">
                 Spectacle for the slides
               </Link>
@@ -183,6 +188,14 @@ export default class Presentation extends React.Component {
               </Link>
             </ListItem>
           </List>
+        </Slide>
+        <Slide>
+          <Heading size={2} textColor="secondary" caps>
+            Thanks for listening
+          </Heading>
+          <Link href="https://github.com/metsavaht/knowledge-tg-i18next">
+            Slides @ https://github.com/metsavaht/knowledge-tg-i18next
+          </Link>
         </Slide>
       </Deck>
     );
