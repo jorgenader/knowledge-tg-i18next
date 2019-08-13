@@ -56,7 +56,7 @@ export default class Presentation extends React.Component {
             Jorgen Ader
           </Text>
           <Text textSize="1em" textColor="secondary">
-            18.12.2018
+            13.08.2019
           </Text>
         </Slide>
         <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
@@ -145,7 +145,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
           <Text textColor="primary">Resulting file</Text>
-          <CodePane fit lang="js" source={require('./examples/plural-i18next-result.example')} />
+          <CodePane fit lang="js" source={require('./examples/interpolation-i18next-result.example')} />
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
           <Text textColor="primary">Project template examples</Text>
